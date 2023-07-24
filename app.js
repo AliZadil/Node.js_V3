@@ -12,7 +12,7 @@ function luckyDraw(player) {
   });
 }
 
-let players = ['Ali', 'Metehan', 'Fred'];
+let players = ['Joe', 'Caroline', 'Sabrina'];
 
 players.forEach(player => {
   luckyDraw(player)
