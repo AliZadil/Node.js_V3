@@ -2,6 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import morgan from 'morgan';
 import Joi from 'joi';
+import * as planetsController from './controllers/planets';
 
 dotenv.config();
 
@@ -39,6 +40,16 @@ app.get("/", (req, res) => {
 app.get('/api/planets', (req, res) => {
   res.status(200).json(planets);
 });
+
+app.get('/api/planets', planetsController.getAll);
+
+app.get('/api/planets/:id', planetsController.getOneById);
+
+app.post('/api/planets', planetsController.create);
+
+app.put('/api/planets/:id', planetsController.updateById);
+
+app.delete('/api/planets/:id', planetsController.deleteById);
 
 app.get('/api/planets/:id', (req, res) => {
   const planet = planets.find(p => p.id === parseInt(req.params.id));
