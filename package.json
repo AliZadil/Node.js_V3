@@ -1,0 +1,21 @@
+{
+  "name": "my-node-project",
+  "version": "1.0.0",
+  "description": "A simple Node.js and Express application",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "joi": "^17.4.0",
+    "morgan": "^1.10.0",
+    "dotenv": "^8.2.0",
+    "express-async-errors": "^3.1.1",
+    "figlet": "^1.5.2"
+  },
+  "devDependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
